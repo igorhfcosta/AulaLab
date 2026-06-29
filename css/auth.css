@@ -1,0 +1,228 @@
+.nav-login-link {
+  background: var(--amber);
+  border-color: var(--teal-900) !important;
+  box-shadow: 3px 3px 0 var(--teal-900);
+}
+
+.auth-grid,
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.dashboard-grid {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.auth-card,
+.profile-panel,
+.favorites-panel,
+.collections-panel {
+  min-height: 100%;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--teal-900);
+  font-weight: 900;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 3px solid var(--teal-900);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  outline: none;
+}
+
+.auth-form input:focus {
+  background: var(--white);
+  box-shadow: 4px 4px 0 var(--amber);
+}
+
+.radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.radio-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 3px solid var(--teal-900);
+  background: var(--white);
+}
+
+.full-btn {
+  width: 100%;
+}
+
+.stack-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.notice-card {
+  grid-column: 1 / -1;
+  background: var(--amber) !important;
+}
+
+[data-auth-status] {
+  padding: 14px 16px;
+  border: 3px solid var(--teal-900);
+  background: var(--paper);
+  color: var(--teal-900) !important;
+  font-weight: 800;
+}
+
+[data-auth-status][data-type="success"] { background: var(--mint); }
+[data-auth-status][data-type="warning"] { background: var(--amber); }
+[data-auth-status][data-type="error"] { background: var(--coral); }
+
+.library-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  padding: 18px;
+  border: 3px solid var(--teal-900);
+  background: var(--chalk);
+  box-shadow: var(--shadow);
+}
+
+.library-status p {
+  margin: 0;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.favorite-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 13px;
+  border: 3px solid var(--teal-900);
+  background: var(--white);
+  color: var(--teal-900);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 rgba(6, 60, 61, 0.2);
+  transition: 0.18s ease;
+}
+
+.favorite-btn:hover,
+.favorite-btn.is-favorite {
+  background: var(--coral);
+  box-shadow: 3px 3px 0 var(--teal-900);
+}
+
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--teal-900);
+  background: var(--amber);
+  font-size: 2rem;
+  box-shadow: 5px 5px 0 var(--teal-900);
+}
+
+.panel-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+}
+
+.favorites-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.favorite-item,
+.empty-state {
+  padding: 16px;
+  border: 3px solid var(--teal-900);
+  background: var(--white);
+}
+
+.favorite-item {
+  display: grid;
+  gap: 4px;
+}
+
+.favorite-item strong {
+  color: var(--teal-900);
+}
+
+.favorite-item span,
+.empty-state {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.collection-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.collection-preview span {
+  display: inline-flex;
+  padding: 10px 12px;
+  border: 3px solid var(--teal-900);
+  background: var(--mint);
+  color: var(--teal-900);
+  font-weight: 900;
+}
+
+.collection-preview span:nth-child(2n) { background: var(--amber); }
+.collection-preview span:nth-child(3n) { background: var(--coral); }
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 860px) {
+  .auth-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-status,
+  .panel-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
