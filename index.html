@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AulaLab | Biblioteca de Jogos Matemáticos</title>
-  <meta name="description" content="Biblioteca digital de jogos matemáticos para professores da Educação Básica." />
+  <title>AulaLab | Notícias e Jogos Matemáticos</title>
+  <meta name="description" content="Feed de notícias, atualizações e jogos matemáticos do AulaLab." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,116 +25,134 @@
       <div class="nav-links">
         <a href="index.html" class="active">Início</a>
         <a href="jogos.html">Jogos</a>
+        <a href="noticias.html">Notícias</a>
         <a href="guia-professor.html">Guia do professor</a>
         <a href="contribuir.html">Contribuir</a>
-        <a href="sobre.html">Sobre</a>
         <a href="entrar.html" class="nav-login-link">Entrar</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero section-soft">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <span class="eyebrow">Biblioteca digital de jogos matemáticos</span>
-          <h1>Jogos prontos para transformar aulas de Matemática em investigação.</h1>
-          <p>
-            O AulaLab reúne jogos analógicos e digitais com regras, objetivos, materiais e sugestões de aplicação para professores da Educação Básica.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="jogos.html">Explorar jogos</a>
-            <a class="btn btn-outline" href="minha-aulalab.html">Minha AulaLab</a>
+    <section class="news-hero section-soft">
+      <div class="container news-hero-grid">
+        <div class="headline-area reveal">
+          <span class="eyebrow">Boletim AulaLab</span>
+          <h1>Notícias, jogos novos e bastidores da biblioteca.</h1>
+          <p>Um feed para acompanhar atualizações, chamadas para colaboração, adaptações digitais e novidades da ludoteca matemática.</p>
+        </div>
+
+        <section class="featured-slider reveal delay-1" aria-label="Destaques do AulaLab">
+          <div class="slider-track" data-slider-track>
+            <article class="slide is-active" data-slide>
+              <span class="tag">Novidade</span>
+              <h2>AulaLab agora tem favoritos</h2>
+              <p>Salve jogos na sua biblioteca pessoal e retome ideias de aula com mais facilidade.</p>
+              <a class="btn btn-primary" href="noticias/favoritos-aulalab.html">Ler atualização</a>
+            </article>
+
+            <article class="slide" data-slide>
+              <span class="tag">Chamada</span>
+              <h2>Procuramos jogos físicos para adaptação digital</h2>
+              <p>Autores podem autorizar versões digitais com crédito e link para o material original.</p>
+              <a class="btn btn-primary" href="noticias/chamada-jogos-fisicos.html">Ver chamada</a>
+            </article>
+
+            <article class="slide" data-slide>
+              <span class="tag">Em breve</span>
+              <h2>Bingo das Funções entra no radar</h2>
+              <p>Um dos primeiros jogos sugeridos para ganhar página própria e materiais de impressão.</p>
+              <a class="btn btn-primary" href="noticias/bingo-das-funcoes.html">Conhecer ideia</a>
+            </article>
+
+            <article class="slide" data-slide>
+              <span class="tag">Guia</span>
+              <h2>Como usar jogos sem virar passatempo</h2>
+              <p>Mediação, perguntas e registros fazem o jogo virar experiência matemática.</p>
+              <a class="btn btn-primary" href="noticias/jogos-com-intencionalidade.html">Ler guia</a>
+            </article>
           </div>
-        </div>
 
-        <div class="hero-card reveal delay-1" aria-label="Resumo do projeto">
-          <div class="floating-card card-main">
-            <div class="card-icon">🎲</div>
-            <h2>Aprender jogando</h2>
-            <p>Probabilidade, funções, álgebra, geometria, estatística e raciocínio lógico em experiências práticas.</p>
+          <div class="slider-controls" aria-label="Controles do carrossel">
+            <button type="button" data-slider-prev aria-label="Destaque anterior">←</button>
+            <div class="slider-dots" data-slider-dots aria-label="Indicadores do carrossel"></div>
+            <button type="button" data-slider-next aria-label="Próximo destaque">→</button>
           </div>
-          <div class="mini-card mini-card-one">+ jogos imprimíveis</div>
-          <div class="mini-card mini-card-two">+ favoritos</div>
-        </div>
+        </section>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="section-heading reveal">
-        <span class="eyebrow">Por que existe?</span>
-        <h2>Uma ludoteca matemática para professores criarem aulas mais vivas.</h2>
-        <p>O foco é simples: organizar jogos úteis, bonitos e aplicáveis, sem depender de materiais difíceis.</p>
-      </div>
-
-      <div class="features-grid">
-        <article class="feature-card reveal">
-          <span class="feature-icon">🧩</span>
-          <h3>Jogos catalogados</h3>
-          <p>Cada jogo terá conteúdo, série indicada, objetivos, regras, tempo estimado e materiais necessários.</p>
-        </article>
-        <article class="feature-card reveal delay-1">
-          <span class="feature-icon">📄</span>
-          <h3>Materiais para imprimir</h3>
-          <p>Cartas, tabuleiros, fichas, orientações e modelos prontos para levar direto para a sala.</p>
-        </article>
-        <article class="feature-card reveal delay-2">
-          <span class="feature-icon">★</span>
-          <h3>Favoritos do professor</h3>
-          <p>Com conta configurada, cada professor poderá salvar jogos e montar sua própria biblioteca.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-purple">
-      <div class="container split-grid">
-        <div class="reveal">
-          <span class="eyebrow light">Categorias</span>
-          <h2>Comece pequeno. Cresça como biblioteca.</h2>
-          <p>
-            A primeira versão nasce com páginas e estrutura. Depois entram os jogos, PDFs e versões digitais.
-          </p>
+    <section class="section container feed-layout">
+      <div class="feed-main">
+        <div class="feed-heading reveal">
+          <div>
+            <span class="eyebrow">Últimas atualizações</span>
+            <h2>O que está acontecendo no AulaLab</h2>
+          </div>
+          <a class="text-link" href="noticias.html">Ver todas →</a>
         </div>
-        <div class="category-cloud reveal delay-1">
-          <span>Probabilidade</span>
-          <span>Funções</span>
-          <span>Frações</span>
-          <span>Geometria</span>
-          <span>Estatística</span>
-          <span>Álgebra</span>
-          <span>Logaritmos</span>
-          <span>Raciocínio lógico</span>
+
+        <div class="updates-feed">
+          <article class="update-card reveal">
+            <div class="update-date"><strong>29</strong><span>jun</span></div>
+            <div>
+              <span class="tag">Sistema</span>
+              <h3><a href="noticias/favoritos-aulalab.html">Favoritos chegam à biblioteca de jogos</a></h3>
+              <p>Cards de jogos agora podem ser salvos na área Minha AulaLab.</p>
+            </div>
+          </article>
+
+          <article class="update-card reveal delay-1">
+            <div class="update-date"><strong>28</strong><span>jun</span></div>
+            <div>
+              <span class="tag">Chamada</span>
+              <h3><a href="noticias/chamada-jogos-fisicos.html">AulaLab prepara adaptação de jogos físicos</a></h3>
+              <p>O projeto quer dialogar com autores para transformar jogos físicos em versões digitais.</p>
+            </div>
+          </article>
+
+          <article class="update-card reveal delay-2">
+            <div class="update-date"><strong>27</strong><span>jun</span></div>
+            <div>
+              <span class="tag">Jogo</span>
+              <h3><a href="noticias/bingo-das-funcoes.html">Bingo das Funções entra como jogo-teste</a></h3>
+              <p>Uma ideia simples para revisar função afim, quadrática e leitura de expressões.</p>
+            </div>
+          </article>
+
+          <article class="update-card reveal">
+            <div class="update-date"><strong>26</strong><span>jun</span></div>
+            <div>
+              <span class="tag">Professor</span>
+              <h3><a href="noticias/jogos-com-intencionalidade.html">Jogo em sala precisa de mediação</a></h3>
+              <p>O guia inicial defende que jogar é só o começo: discutir estratégias é o ponto central.</p>
+            </div>
+          </article>
         </div>
       </div>
-    </section>
 
-    <section class="section container">
-      <div class="section-heading reveal">
-        <span class="eyebrow">Primeiros jogos sugeridos</span>
-        <h2>Um ponto de partida para preencher a biblioteca.</h2>
-      </div>
+      <aside class="feed-sidebar reveal delay-1">
+        <section class="notice-board">
+          <span class="eyebrow">Mural rápido</span>
+          <h2>Em andamento</h2>
+          <ul class="clean-list board-list">
+            <li>Organizar páginas individuais dos jogos.</li>
+            <li>Criar área para autores e créditos.</li>
+            <li>Testar versões digitais jogáveis.</li>
+            <li>Montar materiais para impressão.</li>
+          </ul>
+          <a class="btn btn-outline full-btn" href="contribuir.html">Sugerir jogo</a>
+        </section>
 
-      <div class="games-preview-grid">
-        <article class="game-preview reveal">
-          <span class="tag">Probabilidade</span>
-          <h3>Carteado da Probabilidade</h3>
-          <p>Escolha dados, analise somas possíveis e tome decisões com base nas chances.</p>
-        </article>
-        <article class="game-preview reveal delay-1">
-          <span class="tag">Funções</span>
-          <h3>Bingo das Funções</h3>
-          <p>Cartelas com resultados, gráficos ou expressões para trabalhar função afim, quadrática e mais.</p>
-        </article>
-        <article class="game-preview reveal delay-2">
-          <span class="tag">Logaritmos</span>
-          <h3>Batalha dos Logaritmos</h3>
-          <p>Cartas com expressões logarítmicas para comparar valores e revisar propriedades.</p>
-        </article>
-      </div>
-
-      <div class="center-action reveal">
-        <a class="btn btn-primary" href="jogos.html">Ver biblioteca inicial</a>
-      </div>
+        <section class="notice-board secondary-board">
+          <span class="eyebrow">Atalhos</span>
+          <div class="quick-links">
+            <a href="jogos.html">Biblioteca de jogos</a>
+            <a href="minha-aulalab.html">Minha AulaLab</a>
+            <a href="guia-professor.html">Guia do professor</a>
+          </div>
+        </section>
+      </aside>
     </section>
   </main>
 
@@ -142,11 +160,11 @@
     <div class="container footer-grid">
       <div>
         <a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a>
-        <p>Biblioteca aberta de jogos matemáticos para professores.</p>
+        <p>Feed de novidades e biblioteca de jogos matemáticos.</p>
       </div>
       <div class="footer-links">
         <a href="jogos.html">Jogos</a>
-        <a href="guia-professor.html">Guia</a>
+        <a href="noticias.html">Notícias</a>
         <a href="minha-aulalab.html">Minha AulaLab</a>
       </div>
     </div>
