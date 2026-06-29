@@ -10,13 +10,28 @@ Criar uma ludoteca matemática aberta, bonita e prática, capaz de apoiar profes
 
 ## Páginas atuais
 
-- `index.html` — página inicial do projeto.
+- `index.html` — página inicial em formato de feed, com carrossel de destaques e últimas atualizações.
+- `noticias.html` — página geral de notícias e chamadas do projeto.
+- `noticias/` — notícias individuais de teste.
 - `jogos.html` — biblioteca inicial com cards de jogos, filtros e favoritos.
 - `entrar.html` — login com Google ou e-mail/senha via Firebase.
 - `minha-aulalab.html` — área pessoal com jogos favoritos.
 - `guia-professor.html` — orientações para aplicação dos jogos em sala.
 - `contribuir.html` — modelo de ficha para cadastrar novos jogos.
 - `sobre.html` — apresentação da proposta.
+
+## Feed de notícias
+
+A home funciona como um boletim do AulaLab:
+
+- carrossel de destaques com troca automática;
+- botões de anterior/próximo;
+- indicadores clicáveis;
+- cards de últimas atualizações;
+- links para notícias completas;
+- mural lateral com tarefas em andamento.
+
+Os estilos específicos estão em `css/news.css`, carregados automaticamente pelo `js/main.js` nas páginas de notícia/feed.
 
 ## Autenticação e favoritos
 
@@ -66,6 +81,7 @@ usuarios/{uid}/favoritos/{gameId}
 - Inserir imagens e ícones próprios.
 - Criar versões digitais jogáveis.
 - Criar coleções personalizadas na área Minha AulaLab.
+- Transformar notícias em dados reutilizáveis via JSON.
 - Melhorar filtros por série, conteúdo e tempo de aula.
 
 ## Status
