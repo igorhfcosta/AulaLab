@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar | AulaLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Menu principal">
+      <a class="brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="guia-professor.html">Guia do professor</a>
+        <a href="contribuir.html">Contribuir</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="entrar.html" class="active nav-login-link">Entrar</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section-soft">
+      <div class="container reveal">
+        <span class="eyebrow">Conta do professor</span>
+        <h1>Entre para salvar seus jogos favoritos.</h1>
+        <p>Esta área já está preparada para login com Google, e-mail e senha. Para ativar de verdade, basta configurar o Firebase.</p>
+      </div>
+    </section>
+
+    <section class="section container auth-grid">
+      <article class="info-panel reveal auth-card" data-auth-visible="logged-out">
+        <h2>Entrar com Google</h2>
+        <p>Use sua conta Google para acessar a biblioteca e sincronizar seus favoritos.</p>
+        <button class="btn btn-primary full-btn" type="button" data-google-login>Entrar com Google</button>
+      </article>
+
+      <article class="info-panel reveal delay-1 auth-card" data-auth-visible="logged-out">
+        <h2>E-mail e senha</h2>
+        <form class="auth-form" data-email-auth>
+          <label>
+            E-mail
+            <input type="email" name="email" placeholder="seuemail@exemplo.com" required>
+          </label>
+          <label>
+            Senha
+            <input type="password" name="password" placeholder="mínimo 6 caracteres" required minlength="6">
+          </label>
+          <div class="radio-row">
+            <label><input type="radio" name="action" value="login" checked> Entrar</label>
+            <label><input type="radio" name="action" value="register"> Criar conta</label>
+          </div>
+          <button class="btn btn-outline full-btn" type="submit">Continuar</button>
+        </form>
+      </article>
+
+      <article class="info-panel reveal auth-card" data-auth-visible="logged-in" hidden>
+        <h2>Você já está conectado</h2>
+        <p><strong data-user-name>Usuário</strong></p>
+        <p data-user-email>email</p>
+        <div class="stack-actions">
+          <a class="btn btn-primary" href="minha-aulalab.html">Abrir Minha AulaLab</a>
+          <button class="btn btn-outline" type="button" data-logout>Sair</button>
+        </div>
+      </article>
+
+      <article class="info-panel reveal delay-2 auth-card notice-card">
+        <h2>Status</h2>
+        <p data-auth-status>Se o Firebase ainda não estiver configurado, os favoritos serão salvos apenas neste navegador.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Conta, favoritos e coleções para professores.</p></div>
+      <div class="footer-links"><a href="jogos.html">Jogos</a><a href="minha-aulalab.html">Minha AulaLab</a><a href="sobre.html">Sobre</a></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
