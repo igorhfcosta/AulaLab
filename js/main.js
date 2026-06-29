@@ -1,3 +1,15 @@
+const hasNewsLayout = document.querySelector('.news-hero, .feed-layout, .news-grid-list, .article-page');
+
+if (hasNewsLayout) {
+  const newsStylesAlreadyLoaded = [...document.styleSheets].some((sheet) => sheet.href && sheet.href.endsWith('/css/news.css'));
+  if (!newsStylesAlreadyLoaded) {
+    const newsStyles = document.createElement('link');
+    newsStyles.rel = 'stylesheet';
+    newsStyles.href = document.querySelector('link[href="../css/style.css"]') ? '../css/news.css' : 'css/news.css';
+    document.head.appendChild(newsStyles);
+  }
+}
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
