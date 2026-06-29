@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/library.css" />
 </head>
 <body>
   <header class="site-header">
@@ -18,9 +19,9 @@
       <div class="nav-links">
         <a href="index.html">Início</a>
         <a href="jogos.html" class="active">Jogos</a>
-        <a href="guia-professor.html">Guia do professor</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="guia-professor.html">Guia</a>
         <a href="contribuir.html">Contribuir</a>
-        <a href="sobre.html">Sobre</a>
         <a href="entrar.html" class="nav-login-link">Entrar</a>
       </div>
     </nav>
@@ -29,9 +30,9 @@
   <main>
     <section class="page-hero section-soft">
       <div class="container reveal">
-        <span class="eyebrow">Biblioteca inicial</span>
-        <h1>Jogos matemáticos para cadastrar, testar e expandir.</h1>
-        <p>Esta página já vem preparada para receber seus jogos. Por enquanto, deixei cards-modelo com boas ideias para começar.</p>
+        <span class="eyebrow">Biblioteca de jogos</span>
+        <h1>Filtre, favorite e abra páginas individuais dos jogos.</h1>
+        <p>Os jogos agora têm selos de status, avaliação inicial, links próprios e filtros por conteúdo, ano, tempo e tipo de material.</p>
       </div>
     </section>
 
@@ -41,115 +42,75 @@
         <a class="text-link" href="minha-aulalab.html">Ver Minha AulaLab →</a>
       </div>
 
-      <div class="filters reveal" aria-label="Filtros de jogos">
-        <button class="filter-btn active" data-filter="todos">Todos</button>
-        <button class="filter-btn" data-filter="probabilidade">Probabilidade</button>
-        <button class="filter-btn" data-filter="funcoes">Funções</button>
-        <button class="filter-btn" data-filter="algebra">Álgebra</button>
-        <button class="filter-btn" data-filter="geometria">Geometria</button>
-      </div>
+      <form class="enhanced-filters filter-panel reveal" data-advanced-filters>
+        <label>Buscar<input type="search" name="search" placeholder="Nome ou conteúdo"></label>
+        <label>Conteúdo<select name="category"><option value="">Todos</option><option value="probabilidade">Probabilidade</option><option value="funcoes">Funções</option><option value="algebra">Álgebra</option><option value="geometria">Geometria</option></select></label>
+        <label>Ano<select name="year"><option value="">Todos</option><option value="fund2">Fundamental II</option><option value="em">Ensino Médio</option></select></label>
+        <label>Tempo<select name="time"><option value="">Todos</option><option value="curto">Até 50 min</option><option value="medio">50 a 100 min</option><option value="longo">Mais de 100 min</option></select></label>
+        <div class="filter-actions"><button class="btn btn-outline" type="button" data-clear-filters>Limpar</button></div>
+      </form>
 
       <div class="games-grid">
-        <article class="game-card reveal" data-category="probabilidade">
-          <div class="game-topline"><span class="tag">Probabilidade</span><span>2º EM</span></div>
+        <article class="game-card reveal" data-category="probabilidade" data-year="em" data-time="medio" data-type="imprimivel digital">
+          <div class="game-topline"><span class="tag">Probabilidade</span><span>★★★★☆</span></div>
           <h2>Carteado da Probabilidade</h2>
-          <p>Jogo de cartas e dados para discutir eventos possíveis, impossíveis, mais prováveis e menos prováveis.</p>
-          <ul>
-            <li>Tempo: 50 a 100 min</li>
-            <li>Formato: grupos de 2 a 3</li>
-            <li>Status: a cadastrar</li>
-          </ul>
-          <div class="card-actions">
-            <a class="text-link" href="#">Adicionar página do jogo →</a>
-            <button class="favorite-btn" type="button" data-favorite="carteado-probabilidade" data-title="Carteado da Probabilidade" aria-pressed="false">☆ Favoritar</button>
-          </div>
+          <p>Cartas e dados para discutir eventos possíveis, impossíveis, chances e tomada de decisão.</p>
+          <div class="badge-row"><span class="status-badge status-dev">Em desenvolvimento</span><span class="status-badge status-print">Imprimível</span><span class="status-badge status-tested">Base autoral</span></div>
+          <ul><li>Tempo: 50 a 100 min</li><li>Formato: grupos de 2 a 3</li><li>Avaliação: engajamento alto</li></ul>
+          <div class="card-actions"><a class="text-link" href="jogos/carteado-probabilidade.html">Abrir página →</a><button class="favorite-btn" type="button" data-favorite="carteado-probabilidade" data-title="Carteado da Probabilidade" aria-pressed="false">☆ Favoritar</button></div>
         </article>
 
-        <article class="game-card reveal delay-1" data-category="funcoes">
-          <div class="game-topline"><span class="tag">Funções</span><span>9º ano / EM</span></div>
+        <article class="game-card reveal delay-1" data-category="funcoes" data-year="em" data-time="curto" data-type="imprimivel">
+          <div class="game-topline"><span class="tag">Funções</span><span>★★★★☆</span></div>
           <h2>Bingo das Funções</h2>
-          <p>Cartelas com valores, gráficos ou expressões para praticar cálculo, leitura e interpretação de funções.</p>
-          <ul>
-            <li>Tempo: 30 a 50 min</li>
-            <li>Formato: individual ou dupla</li>
-            <li>Status: modelo inicial</li>
-          </ul>
-          <div class="card-actions">
-            <a class="text-link" href="#">Adicionar página do jogo →</a>
-            <button class="favorite-btn" type="button" data-favorite="bingo-funcoes" data-title="Bingo das Funções" aria-pressed="false">☆ Favoritar</button>
-          </div>
+          <p>Cartelas com valores, gráficos ou expressões para praticar leitura e cálculo de funções.</p>
+          <div class="badge-row"><span class="status-badge status-dev">Modelo inicial</span><span class="status-badge status-print">Impressão em breve</span></div>
+          <ul><li>Tempo: 30 a 50 min</li><li>Formato: individual ou dupla</li><li>Avaliação: preparação média</li></ul>
+          <div class="card-actions"><a class="text-link" href="jogos/bingo-funcoes.html">Abrir página →</a><button class="favorite-btn" type="button" data-favorite="bingo-funcoes" data-title="Bingo das Funções" aria-pressed="false">☆ Favoritar</button></div>
         </article>
 
-        <article class="game-card reveal delay-2" data-category="algebra">
-          <div class="game-topline"><span class="tag">Álgebra</span><span>Fund. II</span></div>
+        <article class="game-card reveal delay-2" data-category="algebra" data-year="fund2" data-time="curto" data-type="tabuleiro">
+          <div class="game-topline"><span class="tag">Álgebra</span><span>★★★☆☆</span></div>
           <h2>Corrida das Equações</h2>
-          <p>Tabuleiro em que os alunos avançam ao resolver equações e desafios de raciocínio algébrico.</p>
-          <ul>
-            <li>Tempo: 40 a 60 min</li>
-            <li>Formato: grupos</li>
-            <li>Status: modelo inicial</li>
-          </ul>
-          <div class="card-actions">
-            <a class="text-link" href="#">Adicionar página do jogo →</a>
-            <button class="favorite-btn" type="button" data-favorite="corrida-equacoes" data-title="Corrida das Equações" aria-pressed="false">☆ Favoritar</button>
-          </div>
+          <p>Jogo em manutenção. A página individual será preenchida com regras e materiais.</p>
+          <div class="badge-row"><span class="status-badge status-dev">Em ideia</span><span class="status-badge status-maintenance">Em manutenção</span></div>
+          <ul><li>Tempo: 40 a 60 min</li><li>Formato: grupos</li><li>Avaliação: protótipo</li></ul>
+          <div class="card-actions"><a class="text-link" href="noticias.html">Em manutenção →</a><button class="favorite-btn" type="button" data-favorite="corrida-equacoes" data-title="Corrida das Equações" aria-pressed="false">☆ Favoritar</button></div>
         </article>
 
-        <article class="game-card reveal" data-category="geometria">
-          <div class="game-topline"><span class="tag">Geometria</span><span>Fund. II</span></div>
+        <article class="game-card reveal" data-category="geometria" data-year="fund2" data-time="curto" data-type="cartas">
+          <div class="game-topline"><span class="tag">Geometria</span><span>★★★☆☆</span></div>
           <h2>Missão dos Polígonos</h2>
-          <p>Jogo de cartas com pistas para identificar figuras, propriedades, ângulos e relações geométricas.</p>
-          <ul>
-            <li>Tempo: 30 a 50 min</li>
-            <li>Formato: equipes</li>
-            <li>Status: ideia</li>
-          </ul>
-          <div class="card-actions">
-            <a class="text-link" href="#">Adicionar página do jogo →</a>
-            <button class="favorite-btn" type="button" data-favorite="missao-poligonos" data-title="Missão dos Polígonos" aria-pressed="false">☆ Favoritar</button>
-          </div>
+          <p>Jogo em manutenção para trabalhar figuras, propriedades, ângulos e pistas geométricas.</p>
+          <div class="badge-row"><span class="status-badge status-dev">Ideia</span><span class="status-badge status-maintenance">Em manutenção</span></div>
+          <ul><li>Tempo: 30 a 50 min</li><li>Formato: equipes</li><li>Avaliação: a testar</li></ul>
+          <div class="card-actions"><a class="text-link" href="noticias.html">Em manutenção →</a><button class="favorite-btn" type="button" data-favorite="missao-poligonos" data-title="Missão dos Polígonos" aria-pressed="false">☆ Favoritar</button></div>
         </article>
 
-        <article class="game-card reveal delay-1" data-category="probabilidade">
-          <div class="game-topline"><span class="tag">Estatística</span><span>Fund. II / EM</span></div>
+        <article class="game-card reveal delay-1" data-category="probabilidade" data-year="em" data-time="longo" data-type="investigacao">
+          <div class="game-topline"><span class="tag">Estatística</span><span>★★★★☆</span></div>
           <h2>Investigadores de Dados</h2>
-          <p>Os alunos coletam dados da turma, organizam tabelas e defendem conclusões com gráficos.</p>
-          <ul>
-            <li>Tempo: 2 aulas</li>
-            <li>Formato: grupos</li>
-            <li>Status: ideia</li>
-          </ul>
-          <div class="card-actions">
-            <a class="text-link" href="#">Adicionar página do jogo →</a>
-            <button class="favorite-btn" type="button" data-favorite="investigadores-dados" data-title="Investigadores de Dados" aria-pressed="false">☆ Favoritar</button>
-          </div>
+          <p>Jogo investigativo em manutenção para coleta, organização e interpretação de dados da turma.</p>
+          <div class="badge-row"><span class="status-badge status-dev">Ideia</span><span class="status-badge status-tested">Potencial de relato</span></div>
+          <ul><li>Tempo: 2 aulas</li><li>Formato: grupos</li><li>Avaliação: discussão alta</li></ul>
+          <div class="card-actions"><a class="text-link" href="noticias.html">Em manutenção →</a><button class="favorite-btn" type="button" data-favorite="investigadores-dados" data-title="Investigadores de Dados" aria-pressed="false">☆ Favoritar</button></div>
         </article>
 
-        <article class="game-card reveal delay-2" data-category="algebra">
-          <div class="game-topline"><span class="tag">Logaritmos</span><span>EM</span></div>
+        <article class="game-card reveal delay-2" data-category="algebra" data-year="em" data-time="curto" data-type="cartas">
+          <div class="game-topline"><span class="tag">Logaritmos</span><span>★★★☆☆</span></div>
           <h2>Batalha dos Logaritmos</h2>
-          <p>Cartas com expressões logarítmicas: vence quem interpretar melhor propriedades e valores.</p>
-          <ul>
-            <li>Tempo: 30 a 50 min</li>
-            <li>Formato: duplas</li>
-            <li>Status: modelo inicial</li>
-          </ul>
-          <div class="card-actions">
-            <a class="text-link" href="#">Adicionar página do jogo →</a>
-            <button class="favorite-btn" type="button" data-favorite="batalha-logaritmos" data-title="Batalha dos Logaritmos" aria-pressed="false">☆ Favoritar</button>
-          </div>
+          <p>Jogo de cartas em manutenção para comparar expressões logarítmicas e revisar propriedades.</p>
+          <div class="badge-row"><span class="status-badge status-dev">Modelo inicial</span><span class="status-badge status-maintenance">Em manutenção</span></div>
+          <ul><li>Tempo: 30 a 50 min</li><li>Formato: duplas</li><li>Avaliação: a testar</li></ul>
+          <div class="card-actions"><a class="text-link" href="noticias.html">Em manutenção →</a><button class="favorite-btn" type="button" data-favorite="batalha-logaritmos" data-title="Batalha dos Logaritmos" aria-pressed="false">☆ Favoritar</button></div>
         </article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Jogos matemáticos para aulas mais investigativas.</p></div>
-      <div class="footer-links"><a href="index.html">Início</a><a href="guia-professor.html">Guia</a><a href="minha-aulalab.html">Minha AulaLab</a></div>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Jogos matemáticos com filtros, selos e favoritos.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="noticias.html">Notícias</a><a href="minha-aulalab.html">Minha AulaLab</a></div></div></footer>
   <script src="js/main.js"></script>
+  <script src="js/library.js"></script>
   <script type="module" src="js/auth.js"></script>
 </body>
 </html>
