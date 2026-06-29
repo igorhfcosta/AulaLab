@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favoritos chegam à biblioteca | AulaLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Menu principal">
+      <a class="brand" href="../index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="../index.html">Início</a>
+        <a href="../jogos.html">Jogos</a>
+        <a href="../noticias.html" class="active">Notícias</a>
+        <a href="../guia-professor.html">Guia do professor</a>
+        <a href="../contribuir.html">Contribuir</a>
+        <a href="../entrar.html" class="nav-login-link">Entrar</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article class="article-page section-soft">
+      <div class="container article-wrap reveal">
+        <a class="text-link" href="../noticias.html">← Voltar para notícias</a>
+        <span class="tag">Sistema</span>
+        <h1>Favoritos chegam à biblioteca de jogos</h1>
+        <p class="article-meta">Publicado em 29 de junho de 2026</p>
+        <p class="lead">A página de jogos do AulaLab agora tem botões de favorito para salvar jogos em uma área pessoal.</p>
+        <p>Esta primeira versão funciona em dois modos. Sem Firebase configurado, os favoritos ficam salvos no próprio navegador. Com Firebase, a estrutura já está preparada para sincronizar tudo com a conta do usuário.</p>
+        <p>A ideia é que cada professor possa montar sua própria biblioteca, separar jogos para aulas futuras e encontrar rapidamente os recursos que mais usa.</p>
+        <div class="article-actions"><a class="btn btn-primary" href="../jogos.html">Favoritar jogos</a><a class="btn btn-outline" href="../minha-aulalab.html">Ver Minha AulaLab</a></div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="../index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Atualizações da biblioteca.</p></div><div class="footer-links"><a href="../noticias.html">Notícias</a><a href="../jogos.html">Jogos</a><a href="../minha-aulalab.html">Minha AulaLab</a></div></div></footer>
+  <script src="../js/main.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+</body>
+</html>
