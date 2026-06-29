@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/library.css" />
 </head>
 <body>
   <header class="site-header">
@@ -16,66 +17,25 @@
       <a class="brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a>
       <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
-        <a href="index.html">Início</a>
-        <a href="jogos.html">Jogos</a>
-        <a href="noticias.html" class="active">Notícias</a>
-        <a href="guia-professor.html">Guia do professor</a>
-        <a href="contribuir.html">Contribuir</a>
-        <a href="entrar.html" class="nav-login-link">Entrar</a>
+        <a href="index.html">Início</a><a href="jogos.html">Jogos</a><a href="noticias.html" class="active">Notícias</a><a href="guia-professor.html">Guia</a><a href="contribuir.html">Contribuir</a><a href="entrar.html" class="nav-login-link">Entrar</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="page-hero section-soft">
-      <div class="container reveal">
-        <span class="eyebrow">Notícias</span>
-        <h1>Atualizações, chamadas e bastidores do AulaLab.</h1>
-        <p>Um espaço para acompanhar o crescimento da biblioteca, os jogos em desenvolvimento e as adaptações digitais.</p>
-      </div>
-    </section>
-
+    <section class="page-hero section-soft"><div class="container reveal"><span class="eyebrow">Notícias por categoria</span><h1>Atualizações, chamadas, jogos e bastidores.</h1><p>Filtre o feed por tipo de notícia e acompanhe o crescimento do AulaLab.</p></div></section>
     <section class="section container">
+      <div class="news-category-tabs reveal"><button class="active" data-news-category="todos">Todas</button><button data-news-category="sistema">Sistema</button><button data-news-category="chamada">Chamadas</button><button data-news-category="jogo">Jogos</button><button data-news-category="professor">Professor</button><button data-news-category="manutencao">Em manutenção</button></div>
       <div class="news-grid-list">
-        <article class="news-card reveal">
-          <span class="tag">Sistema</span>
-          <h2><a href="noticias/favoritos-aulalab.html">Favoritos chegam à biblioteca de jogos</a></h2>
-          <p>Os usuários já podem salvar jogos em uma área pessoal, com modo local e estrutura pronta para Firebase.</p>
-          <time datetime="2026-06-29">29 de junho de 2026</time>
-        </article>
-
-        <article class="news-card reveal delay-1">
-          <span class="tag">Chamada</span>
-          <h2><a href="noticias/chamada-jogos-fisicos.html">AulaLab prepara adaptação de jogos físicos</a></h2>
-          <p>A ideia é conversar com autores de jogos matemáticos e criar versões digitais com crédito e autorização.</p>
-          <time datetime="2026-06-28">28 de junho de 2026</time>
-        </article>
-
-        <article class="news-card reveal delay-2">
-          <span class="tag">Jogo</span>
-          <h2><a href="noticias/bingo-das-funcoes.html">Bingo das Funções entra como jogo-teste</a></h2>
-          <p>Um modelo inicial para trabalhar expressões, tabelas, gráficos e valores de funções em sala.</p>
-          <time datetime="2026-06-27">27 de junho de 2026</time>
-        </article>
-
-        <article class="news-card reveal">
-          <span class="tag">Professor</span>
-          <h2><a href="noticias/jogos-com-intencionalidade.html">Jogo em sala precisa de mediação</a></h2>
-          <p>Um jogo matemático ganha força quando o professor organiza perguntas, registros e discussão coletiva.</p>
-          <time datetime="2026-06-26">26 de junho de 2026</time>
-        </article>
+        <article class="news-card reveal" data-news-card data-category="sistema"><span class="tag">Sistema</span><h2><a href="noticias/favoritos-aulalab.html">Favoritos chegam à biblioteca de jogos</a></h2><p>Os usuários já podem salvar jogos em uma área pessoal, com modo local e estrutura pronta para Firebase.</p><time datetime="2026-06-29">29 de junho de 2026</time></article>
+        <article class="news-card reveal delay-1" data-news-card data-category="chamada"><span class="tag">Chamada</span><h2><a href="noticias/chamada-jogos-fisicos.html">AulaLab prepara adaptação de jogos físicos</a></h2><p>A ideia é conversar com autores de jogos matemáticos e criar versões digitais com crédito e autorização.</p><time datetime="2026-06-28">28 de junho de 2026</time></article>
+        <article class="news-card reveal delay-2" data-news-card data-category="jogo"><span class="tag">Jogo</span><h2><a href="noticias/bingo-das-funcoes.html">Bingo das Funções entra como jogo-teste</a></h2><p>Um modelo inicial para trabalhar expressões, tabelas, gráficos e valores de funções em sala.</p><time datetime="2026-06-27">27 de junho de 2026</time></article>
+        <article class="news-card reveal" data-news-card data-category="professor"><span class="tag">Professor</span><h2><a href="noticias/jogos-com-intencionalidade.html">Jogo em sala precisa de mediação</a></h2><p>Um jogo matemático ganha força quando o professor organiza perguntas, registros e discussão coletiva.</p><time datetime="2026-06-26">26 de junho de 2026</time></article>
+        <article class="news-card reveal delay-1" data-news-card data-category="manutencao"><span class="tag">Em manutenção</span><h2>Mapa da biblioteca em construção</h2><p>Painel com total de jogos, versões digitais, materiais para impressão, relatos e adaptações autorizadas.</p><time datetime="2026-06-29">29 de junho de 2026</time></article>
+        <article class="news-card reveal delay-2" data-news-card data-category="manutencao"><span class="tag">Em manutenção</span><h2>Créditos e licenças em preparação</h2><p>Área para organizar autoria, autorização, links originais e tipos de licença dos materiais.</p><time datetime="2026-06-29">29 de junho de 2026</time></article>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Notícias e bastidores da biblioteca.</p></div>
-      <div class="footer-links"><a href="index.html">Início</a><a href="jogos.html">Jogos</a><a href="minha-aulalab.html">Minha AulaLab</a></div>
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script type="module" src="js/auth.js"></script>
-</body>
-</html>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Notícias categorizadas da biblioteca.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="jogos.html">Jogos</a><a href="minha-aulalab.html">Minha AulaLab</a></div></div></footer>
+  <script src="js/main.js"></script><script src="js/library.js"></script><script type="module" src="js/auth.js"></script>
+</body></html>
