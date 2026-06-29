@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos | AulaLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Menu principal">
+      <a class="brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="jogos.html" class="active">Jogos</a>
+        <a href="guia-professor.html">Guia do professor</a>
+        <a href="contribuir.html">Contribuir</a>
+        <a href="sobre.html">Sobre</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section-soft">
+      <div class="container reveal">
+        <span class="eyebrow">Biblioteca inicial</span>
+        <h1>Jogos matemáticos para cadastrar, testar e expandir.</h1>
+        <p>Esta página já vem preparada para receber seus jogos. Por enquanto, deixei cards-modelo com boas ideias para começar.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="filters reveal" aria-label="Filtros de jogos">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="probabilidade">Probabilidade</button>
+        <button class="filter-btn" data-filter="funcoes">Funções</button>
+        <button class="filter-btn" data-filter="algebra">Álgebra</button>
+        <button class="filter-btn" data-filter="geometria">Geometria</button>
+      </div>
+
+      <div class="games-grid">
+        <article class="game-card reveal" data-category="probabilidade">
+          <div class="game-topline"><span class="tag">Probabilidade</span><span>2º EM</span></div>
+          <h2>Carteado da Probabilidade</h2>
+          <p>Jogo de cartas e dados para discutir eventos possíveis, impossíveis, mais prováveis e menos prováveis.</p>
+          <ul>
+            <li>Tempo: 50 a 100 min</li>
+            <li>Formato: grupos de 2 a 3</li>
+            <li>Status: a cadastrar</li>
+          </ul>
+          <a class="text-link" href="#">Adicionar página do jogo →</a>
+        </article>
+
+        <article class="game-card reveal delay-1" data-category="funcoes">
+          <div class="game-topline"><span class="tag">Funções</span><span>9º ano / EM</span></div>
+          <h2>Bingo das Funções</h2>
+          <p>Cartelas com valores, gráficos ou expressões para praticar cálculo, leitura e interpretação de funções.</p>
+          <ul>
+            <li>Tempo: 30 a 50 min</li>
+            <li>Formato: individual ou dupla</li>
+            <li>Status: modelo inicial</li>
+          </ul>
+          <a class="text-link" href="#">Adicionar página do jogo →</a>
+        </article>
+
+        <article class="game-card reveal delay-2" data-category="algebra">
+          <div class="game-topline"><span class="tag">Álgebra</span><span>Fund. II</span></div>
+          <h2>Corrida das Equações</h2>
+          <p>Tabuleiro em que os alunos avançam ao resolver equações e desafios de raciocínio algébrico.</p>
+          <ul>
+            <li>Tempo: 40 a 60 min</li>
+            <li>Formato: grupos</li>
+            <li>Status: modelo inicial</li>
+          </ul>
+          <a class="text-link" href="#">Adicionar página do jogo →</a>
+        </article>
+
+        <article class="game-card reveal" data-category="geometria">
+          <div class="game-topline"><span class="tag">Geometria</span><span>Fund. II</span></div>
+          <h2>Missão dos Polígonos</h2>
+          <p>Jogo de cartas com pistas para identificar figuras, propriedades, ângulos e relações geométricas.</p>
+          <ul>
+            <li>Tempo: 30 a 50 min</li>
+            <li>Formato: equipes</li>
+            <li>Status: ideia</li>
+          </ul>
+          <a class="text-link" href="#">Adicionar página do jogo →</a>
+        </article>
+
+        <article class="game-card reveal delay-1" data-category="probabilidade">
+          <div class="game-topline"><span class="tag">Estatística</span><span>Fund. II / EM</span></div>
+          <h2>Investigadores de Dados</h2>
+          <p>Os alunos coletam dados da turma, organizam tabelas e defendem conclusões com gráficos.</p>
+          <ul>
+            <li>Tempo: 2 aulas</li>
+            <li>Formato: grupos</li>
+            <li>Status: ideia</li>
+          </ul>
+          <a class="text-link" href="#">Adicionar página do jogo →</a>
+        </article>
+
+        <article class="game-card reveal delay-2" data-category="algebra">
+          <div class="game-topline"><span class="tag">Logaritmos</span><span>EM</span></div>
+          <h2>Batalha dos Logaritmos</h2>
+          <p>Cartas com expressões logarítmicas: vence quem interpretar melhor propriedades e valores.</p>
+          <ul>
+            <li>Tempo: 30 a 50 min</li>
+            <li>Formato: duplas</li>
+            <li>Status: modelo inicial</li>
+          </ul>
+          <a class="text-link" href="#">Adicionar página do jogo →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">∑</span><span>AulaLab</span></a><p>Jogos matemáticos para aulas mais investigativas.</p></div>
+      <div class="footer-links"><a href="index.html">Início</a><a href="guia-professor.html">Guia</a><a href="sobre.html">Sobre</a></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
